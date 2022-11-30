@@ -1,0 +1,11 @@
+const path = require('path');
+const rootDir = require('../util/path');
+
+exports.getSuccessControllers = (req, res, next) => {
+    res.sendFile(path.join(rootDir, 'views', 'success.html'));
+  };
+
+  exports.postSuccessControllers =(req, res, next) => {
+    console.log(req.body);
+    res.redirect('/');
+  };
